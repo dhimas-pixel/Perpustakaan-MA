@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    background: #56BF9B;
+    width: 100%;
+    height: 70px;
+}
+
+.left-area {
+    position: fixed;
+    float: left;
+    width: 13%;
+    margin: 8px 1rem;
+    left: 0;
+}
+
+.left-area .logo {
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+
+.left-area span {
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+}
+
+.right-area {
+    float: right;
+    margin-right: 3rem;
+    margin-top: 1.6rem;
+}
+
+.right-area .btn-logout {
+    padding: 8px;
+    text-decoration: none;
+    background-color: #309975;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.4s;
+    transition-property: background, color;
+}
+
+.right-area .btn-logout:hover {
+    color: #309975;
+    background-color: #fff;
+}
+
+.sidebar {
+    position: fixed;
+    margin-top: 70px;
+    padding-top: 1rem;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #309975;
+    transition: 0.4s;
+    transition-property: left;
+}
+
+.sidebar .user .profil {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin-left: 1rem;
+    border: solid 2px #fff;
+}
+
+.sidebar .user {
+    border-bottom: solid 1px #fff;
+    transition: 0.4s;
+    padding-bottom: 1rem;
+}
+
+.sidebar .user span {
+    float: right;
+    margin-right: 3.5rem;
+    margin-top: 7px;
+    color: #fff;
+}
+
+.sidebar .user h4 {
+    position: absolute;
+    color: #fff;
+    margin-top: -2rem;
+    margin-left: 5.8rem;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    transition-property: background, color;
+}
+
+.sidebar ul li:hover a {
+    background: #56BF9B;
+}
+
+label .btn {
+    z-index: 1;
+    left: 265px;
+    position: fixed;
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 1.3rem;
+    transition: 0.4s;
+    transition-property: color;
+}
+
+#check:checked~.sidebar {
+    left: -190px;
+}
+
+#check:checked~.sidebar a span {
+    display: none;
+}
+
+#check:checked~.sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+#check:checked~.sidebar .user {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar ul li.active a {
+    background: #56BF9B;
+    border-bottom: unset 1px #fff;
+}

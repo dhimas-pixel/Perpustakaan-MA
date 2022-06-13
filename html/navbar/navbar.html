@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="navbar-style.css">
+    <script defer src="fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+
+    <header>
+        <label for="check">
+            <i class="fas fa-bars btn"></i>
+        </label>
+
+        <div class="left-area">
+            <a href="#">
+                <img src="../image/LogoMA.png" class="logo">
+                <span>RIDUS</span>
+            </a>
+        </div>
+
+        <div class="right-area">
+            <a href="#" class="btn-logout">Logout</a>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <div class="user">
+            <img src="../image/fb.png" class="profil">
+            <span>Selamat Datang</span>
+            <br>
+            <h4>Stephanus Dhimas Hulio</h4>
+        </div>
+
+        <ul>
+            <li><a href="#"><i class="fas fa-qrcode" style="margin-right: 16px;"></i><span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fas fa-book" style="margin-right: 16px;"></i><span>Buku</span></a>
+            </li>
+            <li><a href="#"><i class="fas fa-calendar-alt" style="margin-right: 16px;"></i><span>Info Pinjam</span></a>
+            </li>
+            <li><a href="#"><i class="fas fa-cog" style="margin-right: 16px;"></i><span>Pengaturan</span></a></li>
+        </ul>
+    </div>
+
+    <script src="../bootstrap/js/jquery.js"></script>
+    <script>
+        $('.sidebar ul li').click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+
+</body>
+
+</html>

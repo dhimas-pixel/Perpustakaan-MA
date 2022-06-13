@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.topbar {
+    position: fixed;
+    background: #56BF9B;
+    width: 100%;
+    height: 70px;
+}
+
+.topbar .left-area {
+    position: fixed;
+    float: left;
+    width: 13%;
+    margin: 0.4rem 1rem;
+    left: 0;
+}
+
+.topbar .left-area .logo-ma {
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+
+.topbar .left-area span {
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    transition: 0.4s;
+    transition-property: color background-color;
+}
+
+.topbar .right-area {
+    float: right;
+    margin-right: 3rem;
+    margin-top: 1.6rem;
+}
+
+.topbar .right-area .btn-logout {
+    padding: 8px;
+    text-decoration: none;
+    background-color: #309975;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.4s;
+    transition-property: background, color;
+}
+
+.topbar .right-area .btn-logout:hover {
+    color: #309975;
+    background-color: #fff;
+}
+
+.menu-burger {
+    z-index: 2;
+    left: 265px;
+    position: fixed;
+    color: white;
+    cursor: pointer;
+    font-size: 26px;
+    margin-top: 0.9rem;
+}
+
+/* Sidebar */
+
+.wrapper .sidebar-wrapper {
+    position: fixed;
+    margin-top: 70px;
+    padding-top: 1rem;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #309975;
+    transition: 0.4s;
+    transition-property: left;
+}
+
+.wrapper .sidebar-wrapper .user .profil {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin-left: 1rem;
+    border: solid 2px #fff;
+}
+
+.wrapper .sidebar-wrapper .user {
+    border-bottom: solid 1px #fff;
+    transition: 0.4s;
+    padding-bottom: 1rem;
+    transition: 0.4s;
+    transition-property: display;
+}
+
+.wrapper .sidebar-wrapper .user span {
+    float: right;
+    margin-right: 3rem;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.wrapper .sidebar-wrapper .user p {
+    position: relative;
+    color: #fff;
+    margin-top: -2rem;
+    margin-left: 5.6rem;
+}
+
+.wrapper .sidebar-wrapper .sidebar-nav .klik-menu {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    transition-property: background, color;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wrapper .sidebar-wrapper .sidebar-nav li:hover .klik-menu {
+    background: #56BF9B;
+}
+
+/* Beranda */
+
+.main {
+    height: 590px;
+    display: block;
+    width: 1100px;
+    overflow: auto;
+}
+
+/* ------------------------------------------- */
+
+#check:checked~.wrapper .sidebar-wrapper {
+    left: -190px;
+}
+
+#check:checked~.wrapper .sidebar-wrapper .klik-menu span {
+    display: none;
+}
+
+#check:checked~.wrapper .sidebar-wrapper .klik-menu {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+#check:checked~.wrapper .sidebar-wrapper .user {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.wrapper .sidebar-wrapper .sidebar-nav li.active .klik-menu {
+    background: #56BF9B;
+    border-bottom: unset 1px #fff;
+}
+
+/* Main-Content */
+
+.wrapper .main-content {
+    margin-left: 14.7rem;
+    position: fixed;
+    margin-top: 70px;
+    transition: 0.4s;
+    transition-property: margin;
+}
+
+#check:checked~.wrapper .main-content {
+    margin-left: 2.8rem;
+}
+
+#check:checked~.wrapper .utama .main-content .main {
+    width: 1290px;
+}
